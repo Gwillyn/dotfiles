@@ -1,0 +1,33 @@
+{
+  "name": "colors",
+  "palette": {
+    "colors": [
+      "#0c151a",
+      "#f7312e",
+      "#31722b",
+      "#fbf695",
+      "#d99f15",
+      "#f0c37b",
+      "#b9b48e",
+      "#bebebe",
+      "#8a8a8d",
+      "#f61f39",
+      "#33722b",
+      "#fbf695",
+      "#FFC107",
+      "#f0c37b",
+      "#b9b48e",
+      "#ffffff"
+    ],
+    "extendedColors": {
+      "accent": "#d99f15",
+      "background": "#0c151a",
+      "cursor": "#bebebe",
+      "foreground": "#bebebe",
+      "selection_background": "#bebebe",
+      "selection_foreground": "#0c151a"
+    }
+  },
+  "settings": {},
+  "timestamp": 1781141243518
+}

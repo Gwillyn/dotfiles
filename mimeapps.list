@@ -1,0 +1,14 @@
+
+[Default Applications]
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+video/webm=mpv.desktop
+audio/mpeg=mpv.desktop
+audio/flac=mpv.desktop
+audio/ogg=mpv.desktop
+image/jpeg=mpv.desktop
+image/png=mpv.desktop
+image/gif=mpv.desktop
+image/webp=mpv.desktop
+image/bmp=mpv.desktop
+image/tiff=mpv.desktop

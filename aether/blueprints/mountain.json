@@ -1,0 +1,46 @@
+{
+  "name": "mountain",
+  "palette": {
+    "colors": [
+      "#0c151a",
+      "#f7312e",
+      "#31722b",
+      "#fbf695",
+      "#d99f15",
+      "#f0c37b",
+      "#b9b48e",
+      "#bebebe",
+      "#8a8a8d",
+      "#f61f39",
+      "#33722b",
+      "#fbf695",
+      "#FFC107",
+      "#f0c37b",
+      "#b9b48e",
+      "#ffffff"
+    ],
+    "wallpaper": "/home/gwillyn/Documents/omarchy-mountain-theme/backgrounds/wallhaven-w5mqr6.jpg",
+    "extendedColors": {
+      "accent": "#d99f15",
+      "cursor": "#bebebe",
+      "selection_background": "#bebebe",
+      "selection_foreground": "#0c151a"
+    }
+  },
+  "adjustments": {
+    "blackPoint": 0,
+    "brightness": 0,
+    "contrast": 0,
+    "gamma": 1,
+    "highlights": 0,
+    "hueShift": 0,
+    "saturation": 0,
+    "shadows": 0,
+    "temperature": 0,
+    "tint": 0,
+    "vibrance": 0,
+    "whitePoint": 0
+  },
+  "settings": {},
+  "timestamp": 1781141267712
+}

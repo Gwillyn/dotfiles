@@ -1,0 +1,46 @@
+{
+  "name": "mountian",
+  "palette": {
+    "colors": [
+      "#141617",
+      "#b3794d",
+      "#c7aa67",
+      "#ddb979",
+      "#3987ac",
+      "#b7702e",
+      "#4cafb4",
+      "#F0CC93",
+      "#5d6468",
+      "#de9d62",
+      "#eacc72",
+      "#f5c450",
+      "#58acdc",
+      "#e3933b",
+      "#69d7de",
+      "#ffd771"
+    ],
+    "wallpaper": "/home/gwillyn/Documents/omarchy-mountain-theme/backgrounds/wallhaven-w5mqr6.jpg",
+    "extendedColors": {
+      "accent": "#3987ac",
+      "cursor": "#F0CC93",
+      "selection_background": "#F0CC93",
+      "selection_foreground": "#141617"
+    }
+  },
+  "adjustments": {
+    "blackPoint": 0,
+    "brightness": 0,
+    "contrast": 0,
+    "gamma": 1,
+    "highlights": 0,
+    "hueShift": 0,
+    "saturation": 0,
+    "shadows": 0,
+    "temperature": 0,
+    "tint": 0,
+    "vibrance": 0,
+    "whitePoint": 0
+  },
+  "settings": {},
+  "timestamp": 1781140610148
+}
