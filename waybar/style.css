@@ -73,7 +73,7 @@ window#waybar {
 /* ── Window title ───────────────────────────────────────── */
 
 #window {
-  color: @background;
+  color: #0c151a;
   font-size: 13px;
   font-weight: 600;
   padding: 0 8px;
@@ -83,14 +83,14 @@ window#waybar {
 
 #wireplumber,
 #pulseaudio {
-  color: @background;
+  color: @foreground;
   font-size: 12px;
   padding: 0 8px;
   border-radius: 12px;
 }
 
 #network {
-  color: @background;
+  color: @foreground;
   font-size: 12px;
   padding: 0 8px;
   border-radius: 12px;
@@ -106,16 +106,16 @@ window#waybar {
 }
 
 #battery.warning {
-  color: @background;
+  color: #0c151a;
 }
 
 #battery.critical {
-  color: #f7768e;
+  color: #0c151a;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: @foreground;
+  color: #0c151a;
 }
 
 /* ── Clock ──────────────────────────────────────────────── */
