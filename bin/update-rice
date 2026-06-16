@@ -1,0 +1,18 @@
+#!/bin/bash
+
+REPO="$HOME/GitHub/arch-rice"
+
+rsync -av --delete ~/.config/hypr/   "$REPO/hypr/"
+rsync -av --delete ~/.config/waybar/ "$REPO/waybar/"
+rsync -av --delete ~/.config/kitty/  "$REPO/kitty/"
+rsync -av --delete ~/.config/tofi/   "$REPO/tofi/"
+rsync -av --delete ~/.config/btop/   "$REPO/btop/"
+rsync -av --delete ~/.config/nvim/   "$REPO/nvim/"
+
+cp ~/.config/mimeapps.list "$REPO/mimeapps.list"
+
+cd "$REPO" || exit
+
+git add .
+git commit -m "Update configs"
+git push

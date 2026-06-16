@@ -1,0 +1,96 @@
+#!/bin/bash
+
+get_input() {
+  local def="$1"
+  local string1
+  local string2
+  local a
+
+  if [[ "$def" == "1" ]]; then
+    string1="1: Return (Default)"
+    string2="2: Exit"
+  else
+    string1="1: Return"
+    string2="2: Exit (Default)"
+  fi
+
+  echo
+  echo "$string1"
+  echo "$string2"
+
+  read a
+  printf "\033[A\033[2K"
+
+  if [[ "$def" == "1" ]]; then
+    if [[ "$a" == "1" || -z "$a" ]]; then
+      return 0
+    else
+      exit 0
+    fi
+  else
+    if [[ "$a" == "2" || -z "$a" ]]; then
+      exit 0
+    else
+      return 0
+    fi
+  fi
+}
+
+animation() {
+  local pid=$1
+  printf "\e[?25l"
+  while kill -0 "$pid" 2>/dev/null; do
+    printf "\r ."
+    sleep 0.2
+    printf "\r .."
+    sleep 0.2
+    printf "\r ..."
+    sleep 0.2
+    printf "\r    \r"
+
+  done
+  wait "$pid"
+  printf "\r\033[K\n"
+  printf "\e[?25h"
+}
+
+while true; do
+  clear
+  echo
+  echo "1: VPN Startup (Default)"
+  echo "2: VPN Shutdown"
+  echo "3: VPN Status"
+  echo
+
+  read answer
+  printf "\033[A\033[2K"
+
+  if [[ "$answer" == "1" || -z "$answer" ]]; then
+    clear
+    printf "1\n" | sudo surfshark-vpn attack >/dev/null 2>&1 &
+    pid=$!
+
+    if animation "$pid"; then
+      echo "VPN connected"
+    else
+      echo "VPN failed"
+    fi
+    get_input 0
+
+  elif [[ "$answer" == "2" ]]; then
+    clear
+    sudo surfshark-vpn down &
+    pid=$!
+    animation $pid
+    get_input 0
+
+  elif [[ "$answer" == "3" ]]; then
+    clear
+    sudo surfshark-vpn status
+    get_input 1
+
+  else
+    echo "Not valid"
+    sleep 1
+  fi
+done
