@@ -3,3 +3,4 @@
 .cache/
 node_modules/
 __pycache__/
+bin/eat-food
