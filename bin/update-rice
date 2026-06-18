@@ -1,18 +1,37 @@
 #!/bin/bash
 
+set -e
+
 REPO="$HOME/GitHub/arch-rice"
 
-rsync -av --delete ~/.config/hypr/   "$REPO/hypr/"
+mkdir -p "$REPO"
+
+# Configs
+rsync -av --delete ~/.config/hypr/ "$REPO/hypr/"
 rsync -av --delete ~/.config/waybar/ "$REPO/waybar/"
-rsync -av --delete ~/.config/kitty/  "$REPO/kitty/"
-rsync -av --delete ~/.config/tofi/   "$REPO/tofi/"
-rsync -av --delete ~/.config/btop/   "$REPO/btop/"
-rsync -av --delete ~/.config/nvim/   "$REPO/nvim/"
+rsync -av --delete ~/.config/kitty/ "$REPO/kitty/"
+rsync -av --delete ~/.config/tofi/ "$REPO/tofi/"
+rsync -av --delete ~/.config/btop/ "$REPO/btop/"
+rsync -av --delete ~/.config/nvim/ "$REPO/nvim/"
+rsync -av --delete ~/.config/zed/ "$REPO/zed/"
+rsync -av --delete ~/.config/zathura/ "$REPO/zathura/"
+rsync -av --delete ~/.local/bin/ "$REPO/bin/"
 
 cp ~/.config/mimeapps.list "$REPO/mimeapps.list"
 
-cd "$REPO" || exit
+# Packages
+pacman -Qqe >"$REPO/packages-all.txt"
+pacman -Qqen >"$REPO/packages-pacman.txt"
+pacman -Qqem >"$REPO/packages-aur.txt"
+
+cd "$REPO"
 
 git add .
-git commit -m "Update configs"
+
+if git diff --cached --quiet; then
+  echo "Nothing to commit."
+  exit 0
+fi
+
+git commit -m "Update configs and packages"
 git push

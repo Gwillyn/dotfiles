@@ -1,5 +1,20 @@
 #!/bin/bash
 
+logo() {
+  printf """
+  █████   █████ ███████████  ██████   █████
+ ▒▒███   ▒▒███ ▒▒███▒▒▒▒▒███▒▒██████ ▒▒███ 
+  ▒███    ▒███  ▒███    ▒███ ▒███▒███ ▒███ 
+  ▒███    ▒███  ▒██████████  ▒███▒▒███▒███ 
+  ▒▒███   ███   ▒███▒▒▒▒▒▒   ▒███ ▒▒██████ 
+   ▒▒▒█████▒    ▒███         ▒███  ▒▒█████ 
+     ▒▒███      █████        █████  ▒▒█████
+      ▒▒▒      ▒▒▒▒▒        ▒▒▒▒▒    ▒▒▒▒▒ 
+                                           
+                                           
+                                           
+  """
+}
 get_input() {
   local def="$1"
   local string1
@@ -56,6 +71,7 @@ animation() {
 
 while true; do
   clear
+  logo
   echo
   echo "1: VPN Startup (Default)"
   echo "2: VPN Shutdown"
@@ -67,6 +83,7 @@ while true; do
 
   if [[ "$answer" == "1" || -z "$answer" ]]; then
     clear
+    logo
     printf "1\n" | sudo surfshark-vpn attack >/dev/null 2>&1 &
     pid=$!
 
@@ -79,13 +96,20 @@ while true; do
 
   elif [[ "$answer" == "2" ]]; then
     clear
-    sudo surfshark-vpn down &
+    logo
+    sudo surfshark-vpn down >/dev/null 2>&1 &
     pid=$!
-    animation $pid
+
+    if animation "$pid"; then
+      echo "VPN down"
+    else
+      echo "VPN failed"
+    fi
     get_input 0
 
   elif [[ "$answer" == "3" ]]; then
     clear
+    logo
     sudo surfshark-vpn status
     get_input 1
 
