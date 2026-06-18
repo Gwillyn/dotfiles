@@ -1,0 +1,15 @@
+aether
+eclipse-jee-bin
+localsend
+mcpelauncher-linux
+mcpelauncher-ui
+minecraft-launcher
+python-tkcalendar
+spotatui
+surfshark-vpn-cli-bin
+tofi
+walker-bin
+wifitui
+yay
+yay-debug
+yazi-nightly-bin

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if pgrep -x gammastep >/dev/null; then
+  pkill gammastep
+else
+  gammastep -O 6500 -b 0.4 >/dev/null 2>&1 &
+fi
