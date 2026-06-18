@@ -1,0 +1,72 @@
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space ,": [
+        "tab_switcher::Toggle",
+        {
+          "select_last": true
+        }
+      ],
+      "space /": "pane::DeploySearch",
+      "space :": "command_palette::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "space E": "project_panel::ToggleFocus",
+      "space f f": "file_finder::Toggle",
+      "space f r": "projects::OpenRecent",
+      "space f t": "project_panel::ToggleFocus",
+      "space s g": "pane::DeploySearch",
+      "space s s": "outline::Toggle",
+      "space s d": "diagnostics::Deploy",
+      "space b b": [
+        "tab_switcher::Toggle",
+        {
+          "select_last": true
+        }
+      ],
+      "space b d": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ],
+      "space b n": "pane::ActivateNextItem",
+      "space b p": "pane::ActivatePreviousItem",
+      "space g g": "git_panel::ToggleFocus",
+      "space g b": "git::Blame",
+      "space g d": "git::Diff",
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "space c f": "editor::Format",
+      "space x x": "diagnostics::Deploy",
+      "space u w": "editor::ToggleSoftWrap",
+      "space w h": "workspace::ActivatePaneLeft",
+      "space w j": "workspace::ActivatePaneDown",
+      "space w k": "workspace::ActivatePaneUp",
+      "space w l": "workspace::ActivatePaneRight",
+      "space w v": "pane::SplitRight",
+      "space w s": "pane::SplitDown",
+      "space w q": "pane::CloseActiveItem",
+      "space t t": "terminal_panel::Toggle",
+      "space q q": "workspace::CloseWindow",
+      "space a a": "agent::ToggleFocus",
+      "space a n": "agent::NewThread",
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "space f f": "file_finder::Toggle",
+      "space f r": "projects::OpenRecent",
+      "space g g": "git_panel::ToggleFocus",
+      "space t t": "terminal_panel::Toggle",
+      "space :": "command_palette::Toggle",
+      "space a a": "agent::ToggleFocus"
+    }
+  }
+]
