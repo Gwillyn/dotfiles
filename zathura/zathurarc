@@ -1,4 +1,12 @@
+# Clipboard copy 
 set selection-clipboard clipboard
-set recolor true
-set recolor-keephue true
+
+# Dark mode
+# set recolor true
+# set recolor-keephue true
+
+# Center while zooming 
+set zoom-center true
+# Center on open
+set vertical-center true
 
