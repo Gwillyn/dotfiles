@@ -30,8 +30,9 @@
   },
   "terminal": {
     "font_weight": 550.0,
-    "font_size": 18.0,
-    "font_family": "JetBrainsMono Nerd Font"
+    "font_size": 15.0,
+    "font_family": "JetBrainsMono Nerd Font",
+    "working_directory": "current_file_directory"
   },
   "session": {
     "trust_all_worktrees": true

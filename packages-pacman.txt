@@ -40,8 +40,10 @@ mpv
 neovim
 network-manager-applet
 networkmanager
+obsidian
 pipewire
 playerctl
+prismlauncher
 pulsemixer
 ripgrep
 rsync
