@@ -16,6 +16,7 @@ rsync -av --delete ~/.config/nvim/ "$REPO/nvim/"
 rsync -av --delete ~/.config/zed/ "$REPO/zed/"
 rsync -av --delete ~/.config/zathura/ "$REPO/zathura/"
 rsync -av --delete ~/.local/bin/ "$REPO/bin/"
+rsync -av --delete ~/.config/obsidian/ "$REPO/obsidian/"
 
 cp ~/.config/mimeapps.list "$REPO/mimeapps.list"
 
