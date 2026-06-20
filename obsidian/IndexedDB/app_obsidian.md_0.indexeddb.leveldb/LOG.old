@@ -1,0 +1,6 @@
+2026/06/18-21:37:27.486 1316d Reusing MANIFEST /home/gwillyn/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/18-21:37:27.486 1316d Recovering log #3
+2026/06/18-21:37:27.499 1316d Reusing old log /home/gwillyn/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000003.log 
+2026/06/18-21:38:00.588 1316d Level-0 table #5: started
+2026/06/18-21:38:00.604 1316d Level-0 table #5: 1627201 bytes OK
+2026/06/18-21:38:00.606 1316d Delete type=0 #3
