@@ -39,8 +39,7 @@ animation() {
 }
 
 delete_food() {
-  cd ~/Documents/
-  rm -r food/
+  rm -rf -- "$HOME/Documents/food"
   echo "Deleted."
   read -p "[Enter]" s
 }
