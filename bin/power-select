@@ -23,6 +23,7 @@ start() {
       gum choose \
         --header " Power Options: " \
         "Shutdown" \
+        "Reboot" \
         "Hibernate"
     )
 
@@ -30,6 +31,11 @@ start() {
     "Shutdown")
       echo "Shutting down..."
       shutdown now
+      break
+      ;;
+    "Reboot")
+      echo "Rebooting"
+      reboot
       break
       ;;
     "Hibernate")
