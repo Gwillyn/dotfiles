@@ -46,8 +46,10 @@ mpv
 neovim
 network-manager-applet
 networkmanager
+obsidian
 pipewire
 playerctl
+prismlauncher
 pulsemixer
 python-tkcalendar
 ripgrep
