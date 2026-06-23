@@ -71,7 +71,8 @@ play() {
     start
     ;;
   4)
-    hyprctl dispatch exec 'kitty -e yazi ~/Documents/food'
+    kitty -e yazi "$HOME/Documents/food" >/dev/null 2>&1 &
+
     start
     ;;
 
@@ -90,7 +91,7 @@ unzipper() {
     clear
     logo
     echo "Unzipping"
-    UNZIP_DISABLE_ZIPBOMB_DETECTION=TRUE unzip -P "$PASSWORD" food.zip -d food >/dev/null 2>&1 &
+    UNZIP_DISABLE_ZIPBOMB_DETECTION=TRUE unzip -P "$PASSWORD" food.zip -x "*.zip" -d food >/dev/null 2>&1 &
     pid=$!
 
     if animation "$pid"; then

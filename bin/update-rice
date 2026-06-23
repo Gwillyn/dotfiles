@@ -2,7 +2,7 @@
 
 set -e
 
-REPO="$HOME/GitHub/arch-rice"
+REPO="$HOME/dotfiles/"
 
 mkdir -p "$REPO"
 
