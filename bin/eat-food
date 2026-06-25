@@ -1,6 +1,14 @@
 #!/bin/bash
+
+if [[ "$1" == "--g" ]]; then
+  file_name="g"
+else
+  file_name="food"
+fi
+
 logo() {
-  printf """
+  if [[ "$file_name" == "food" ]]; then
+    printf """
    ▄▄▄▄▄▄     ▄▄▄▄▄▄     ▄▄▄▄▄▄    ▄▄▄▄▄    
  ▄▀   ░  ▀▄ ▄▀   ░  ▀▄ ▄▀   ░  ▀▄ █     ▀▀▄ 
  █ ░▄▀▀▄ ░░ █ ░▄▀▀▄ ░░ █ ░▄▀▀▄ ░░ █ ░█▀▄   ▒
@@ -15,6 +23,22 @@ logo() {
    ▀▀         ▀▀▀▀▀▀     ▀▀▀▀▀▀     ▀▀▀▀▀▀
  
 """
+  else
+    printf """
+              
+
+ ▄   ▄▄▄▄ 
+ ▀██████▀ 
+   ██   ▄ 
+   ██  ██ 
+   ██  ██ 
+   ▀█████ 
+   ▄   ██ 
+   ▀████▀
+
+
+  """
+  fi
 }
 animation() {
   printf "\r\033[K\n"
@@ -39,22 +63,33 @@ animation() {
 }
 
 delete_food() {
-  rm -rf -- "$HOME/Documents/food"
+  rm -rf -- "$HOME/Documents/$file_name"
   echo "Deleted."
   read -p "[Enter]" s
 }
 
 play() {
-  cd ~/Documents/food/
+  cd ~/Documents/"$file_name"/
   clear
   logo
   printf "\nHow to play?"
-  printf """
+  if [[ "$file_name" == "food" ]]; then
+    printf """
+    1: PlayAll
+    2: Shuffle
+    3: Randomizer
+    4: File Manager
+    5: Delete
+    """
+  else
+    printf """
   1: PlayAll
   2: Shuffle
-  3: Delete
   4: File Manager
+  5: Delete
   """
+  fi
+
   read -p "> " ans
 
   case "$ans" in
@@ -67,12 +102,20 @@ play() {
     start
     ;;
   3)
-    delete_food
+    if [[ "$file_name" == "g" ]]; then
+      start
+    fi
+    python "$HOME/Documents/food/sort.py" --auto >/dev/null 2>&1 &
+    pid=$!
+    animation "$pid"
     start
     ;;
   4)
-    kitty -e yazi "$HOME/Documents/food" >/dev/null 2>&1 &
-
+    kitty -e yazi "$HOME/Documents/$file_name" >/dev/null 2>&1 &
+    start
+    ;;
+  5)
+    delete_food
     start
     ;;
 
@@ -84,14 +127,14 @@ play() {
 
 unzipper() {
   cd ~/Documents/
-  if [[ ! -d "food" ]]; then
+  if [[ ! -d "$file_name" ]]; then
     clear
     logo
     read -s -p "Password: " PASSWORD
     clear
     logo
     echo "Unzipping"
-    UNZIP_DISABLE_ZIPBOMB_DETECTION=TRUE unzip -P "$PASSWORD" food.zip -x "*.zip" -d food >/dev/null 2>&1 &
+    UNZIP_DISABLE_ZIPBOMB_DETECTION=TRUE unzip -P "$PASSWORD" "$file_name.zip" -x "*.zip" -d "$file_name" >/dev/null 2>&1 &
     pid=$!
 
     if animation "$pid"; then

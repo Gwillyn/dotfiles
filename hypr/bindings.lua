@@ -32,6 +32,7 @@ hl.bind(mainMod .. " + CTRL + M", hl.dsp.exec_cmd("~/.local/bin/toggle-touchpad"
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("spotify-launcher"))
 hl.bind(mainMod .. " + CTRL + V", hl.dsp.exec_cmd("kitty --class float -e vpn-connect"))
 hl.bind(mainMod .. " + CTRL + P", hl.dsp.exec_cmd("kitty -e eat-food"))
+hl.bind(mainMod .. " + CTRL + SHIFT + P", hl.dsp.exec_cmd("kitty -e eat-food --g"))
 hl.bind(mainMod .. " + CTRL + G", hl.dsp.exec_cmd("~/.local/bin/brightness-lower"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("kitty -e nvim-projects"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("kitty --class float -e power-select"))
