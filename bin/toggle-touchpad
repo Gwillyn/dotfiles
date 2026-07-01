@@ -4,9 +4,9 @@ DEVICE="ftcs0038:00-2808:0106-touchpad"
 STATE_FILE="/tmp/touchpad-disabled"
 
 if [ -f "$STATE_FILE" ]; then
-  hyprctl keyword "device[$DEVICE]:enabled" true
+  hyprctl eval "hl.device({ name = \"$DEVICE\", enabled = true })"
   rm "$STATE_FILE"
 else
-  hyprctl keyword "device[$DEVICE]:enabled" false
+  hyprctl eval "hl.device({ name = \"$DEVICE\", enabled = false })"
   touch "$STATE_FILE"
 fi
