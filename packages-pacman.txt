@@ -15,6 +15,7 @@ efibootmgr
 fd
 fzf
 gammastep
+gimp
 git
 gjs
 gnome-keyring
@@ -36,6 +37,7 @@ libadwaita
 linux
 linux-firmware
 lmms
+lutris
 man-db
 man-pages
 maven
@@ -57,6 +59,7 @@ rsync
 seahorse
 slurp
 spotify-launcher
+steam
 sudo
 swaybg
 thunar
