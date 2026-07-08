@@ -27,7 +27,8 @@ hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("gtk-launch chatgpt"))
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("gtk-launch x"))
 hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("kitty --class float -e bluetui"))
 hl.bind(mainMod .. " + CTRL + X", hl.dsp.exec_cmd("kitty --class float -e wifitui"))
-hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("eclipse"))
+hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("obsidian"))
+hl.bind(mainMod .. " + SHIFT + U", hl.dsp.exec_cmd("eclipse"))
 hl.bind(mainMod .. " + CTRL + M", hl.dsp.exec_cmd("~/.local/bin/toggle-touchpad"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("spotify-launcher"))
 hl.bind(mainMod .. " + CTRL + V", hl.dsp.exec_cmd("kitty --class float -e vpn-connect"))
@@ -38,6 +39,8 @@ hl.bind(mainMod .. " + CTRL + G", hl.dsp.exec_cmd("~/.local/bin/brightness-lower
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("kitty -e nvim-projects"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("kitty --class float -e power-select"))
 hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_cmd("zeditor"))
+hl.bind(mainMod .. " + CTRL + A", hl.dsp.exec_cmd("kitty --class float -e wiremix"))
+hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd("gtk-launch zen"))
 
 -- Window actions
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))

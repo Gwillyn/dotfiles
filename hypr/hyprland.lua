@@ -16,6 +16,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("nm-applet --indicator")
 	hl.exec_cmd("swaybg -i ~/.config/aether/theme/backgrounds/wall.jpg -m fill")
 	hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark")
+	hl.exec_cmd("toggle-touchpad")
 end)
 
 -- Main settings

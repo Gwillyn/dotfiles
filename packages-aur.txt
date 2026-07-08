@@ -5,6 +5,7 @@ localsend
 mcpelauncher-linux
 mcpelauncher-ui
 minecraft-launcher
+protonup-git
 python-tkcalendar
 spotatui
 surfshark-vpn-cli-bin
@@ -14,3 +15,4 @@ wifitui
 yay
 yay-debug
 yazi-nightly-bin
+zen-browser-bin

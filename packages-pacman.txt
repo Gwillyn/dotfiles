@@ -34,6 +34,7 @@ keyd
 kitty
 lazygit
 libadwaita
+libreoffice-fresh
 linux
 linux-firmware
 lmms
@@ -71,6 +72,10 @@ unzip
 vim
 waybar
 wev
+wine
+wine-mono
+winetricks
+wiremix
 wireplumber
 wl-clipboard
 wofi

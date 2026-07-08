@@ -37,6 +37,7 @@ keyd
 kitty
 lazygit
 libadwaita
+libreoffice-fresh
 linux
 linux-firmware
 lmms
@@ -60,6 +61,7 @@ obsidian
 playerctl
 plymouth
 prismlauncher
+protonup-git
 pulsemixer
 python-tkcalendar
 ripgrep
@@ -84,6 +86,10 @@ walker-bin
 waybar
 wev
 wifitui
+wine
+wine-mono
+winetricks
+wiremix
 wireplumber
 wl-clipboard
 wofi
@@ -96,4 +102,5 @@ yazi-nightly-bin
 zathura
 zathura-pdf-mupdf
 zed
+zen-browser-bin
 zip
