@@ -51,6 +51,10 @@ hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
 -- Move windows with vim keys
 -- If these don't work on your build, use the fallback lines below.
@@ -58,6 +62,10 @@ hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 
 -- Fallback version for move-window binds:
 -- hl.bind(mainMod .. " + SHIFT + H", dispatch("movewindow l"))

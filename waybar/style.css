@@ -106,16 +106,16 @@ window#waybar {
 }
 
 #battery.warning {
-  color: #0c151a;
+  color: #FF0000;
 }
 
 #battery.critical {
-  color: #0c151a;
+  color: #FFA500;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: #0c151a;
+  color: #008000;
 }
 
 /* ── Clock ──────────────────────────────────────────────── */

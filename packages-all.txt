@@ -11,8 +11,8 @@ brightnessctl
 btop
 btrfs-progs
 chromium
-concord
 cryptsetup
+discord
 eclipse-jee-bin
 efibootmgr
 fd
