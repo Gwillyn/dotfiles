@@ -1,0 +1,63 @@
+#!/bin/bash
+
+GOLD="\e[38;2;217;159;21m"
+RESET="\e[0m"
+
+printf "${GOLD}"
+
+logo() {
+  printf """
+ _       __      ____                           
+| |     / /___ _/ / /___ _____  ____  ___  _____
+| | /| / / __ \`/ / / __ \`/ __ \/ __ \/ _ \/ ___/
+| |/ |/ / /_/ / / / /_/ / /_/ / /_/ /  __/ /    
+|__/|__/\__,_/_/_/\__,_/ .___/ .___/\___/_/     
+                      /_/   /_/                 
+"""
+}
+
+get_papers() {
+  files=(~/Documents/Zocs/backgrounds/backup/*)
+
+  filenames=()
+
+  for file in "${files[@]}"; do
+    filenames+=("${file##*/}")
+  done
+}
+
+menu() {
+  length="${#files[@]}"
+  choice=$(
+    gum choose \
+      --selected.foreground="#d99f15" \
+      --header.foreground="#d99f15" \
+      --cursor.foreground="#d99f15" \
+      "${filenames[@]}"
+  )
+
+  for file in "${files[@]}"; do
+    if [[ "${file##*/}" == "$choice" ]]; then
+      pkill swaybg
+      setsid -f swaybg -i "$file" -m fill >/dev/null 2>&1 &
+      replace_wall "$file" "$choice"
+      break
+    fi
+  done
+}
+
+replace_wall() {
+  rm -f ~/Documents/Zocs/backgrounds/wall.png
+  cp "$1" ~/Documents/Zocs/backgrounds/
+  mv ~/Documents/Zocs/backgrounds/"$2" ~/Documents/Zocs/backgrounds/wall.png
+
+}
+
+start() {
+  clear
+  logo
+  get_papers
+  menu
+}
+
+start
