@@ -1,5 +1,9 @@
 #!/bin/bash
 
+GOLD="\e[38;2;217;159;21m"
+RESET="\e[0m"
+printf "${GOLD}"
+
 if [[ "$1" == "--g" ]]; then
   file_name="g"
 else

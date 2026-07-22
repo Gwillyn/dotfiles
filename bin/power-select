@@ -52,8 +52,7 @@ start() {
       break
       ;;
     *)
-      echo "Invalid Input"
-      sleep 1
+      clear
       ;;
     esac
   done
