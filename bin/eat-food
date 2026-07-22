@@ -63,13 +63,13 @@ animation() {
 }
 
 delete_food() {
-  rm -rf -- "$HOME/Documents/$file_name"
+  rm -rf -- "$HOME/Documents/Zocs/$file_name"
   echo "Deleted."
   read -p "[Enter]" s
 }
 
 play() {
-  cd ~/Documents/"$file_name"/
+  cd ~/Documents/Zocs/"$file_name"/
   clear
   logo
   printf "\nHow to play?"
@@ -105,13 +105,13 @@ play() {
     if [[ "$file_name" == "g" ]]; then
       start
     fi
-    python "$HOME/Documents/food/sort.py" --auto >/dev/null 2>&1 &
+    python "$HOME/Documents/Zocs/$file_name/sort_videos.py" --auto >/dev/null 2>&1 &
     pid=$!
     animation "$pid"
     start
     ;;
   4)
-    kitty -e yazi "$HOME/Documents/$file_name" >/dev/null 2>&1 &
+    kitty -e yazi "$HOME/Documents/Zocs/$file_name" >/dev/null 2>&1 &
     start
     ;;
   5)
@@ -126,7 +126,7 @@ play() {
 }
 
 unzipper() {
-  cd ~/Documents/
+  cd ~/Documents/Zocs/
   if [[ ! -d "$file_name" ]]; then
     clear
     logo

@@ -6,7 +6,7 @@ mcpelauncher-ui
 minecraft-launcher
 protonup-git
 python-tkcalendar
-spotatui
+surfshark-client
 surfshark-vpn-cli-bin
 tofi
 walker-bin

@@ -1,6 +1,8 @@
 7zip
 adw-gtk-theme
 amd-ucode
+android-tools
+android-udev
 base
 base-devel
 bluetui
@@ -31,6 +33,7 @@ hyprland
 hyprlock
 imagemagick
 jdk-openjdk
+kdenlive
 keyd
 kitty
 lazygit
@@ -51,6 +54,7 @@ networkmanager
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+obs-studio
 obsidian
 playerctl
 plymouth
@@ -58,6 +62,7 @@ prismlauncher
 pulsemixer
 ripgrep
 rsync
+scrcpy
 seahorse
 slurp
 spotify-launcher

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scrcpy --crop 1080:2000:0:212

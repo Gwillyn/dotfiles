@@ -2,6 +2,8 @@
 adw-gtk-theme
 aether
 amd-ucode
+android-tools
+android-udev
 base
 base-devel
 bluetui
@@ -33,6 +35,7 @@ hyprland
 hyprlock
 imagemagick
 jdk-openjdk
+kdenlive
 keyd
 kitty
 lazygit
@@ -57,6 +60,7 @@ networkmanager
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+obs-studio
 obsidian
 playerctl
 plymouth
@@ -66,12 +70,13 @@ pulsemixer
 python-tkcalendar
 ripgrep
 rsync
+scrcpy
 seahorse
 slurp
-spotatui
 spotify-launcher
 steam
 sudo
+surfshark-client
 surfshark-vpn-cli-bin
 swaybg
 thunar
