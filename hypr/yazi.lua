@@ -16,11 +16,21 @@ hl.window_rule({
 -- This should match terminals/apps launched with:
 -- kitty --class float ...
 hl.window_rule({
+	name = "float-terminals-small",
+	match = {
+		class = "^float-small$",
+	},
+	float = true,
+	center = true,
+	size = "700 500",
+})
+
+hl.window_rule({
 	name = "float-terminals",
 	match = {
 		class = "^float$",
 	},
 	float = true,
 	center = true,
-	size = "700 500",
+	size = "1000 700",
 })
