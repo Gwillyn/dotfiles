@@ -16,8 +16,8 @@ logo() {
      ▒▒███      █████        █████  ▒▒█████
       ▒▒▒      ▒▒▒▒▒        ▒▒▒▒▒    ▒▒▒▒▒ 
                                            
-                                           
-                                           
+                            * - Default    
+
   """
 }
 get_input() {
@@ -78,8 +78,8 @@ while true; do
   clear
   logo
   echo
-  echo "1: VPN Startup (Default)"
-  echo "2: VPN Shutdown"
+  echo "1: Open GUI *"
+  echo "2: VPN Quit"
   echo "3: VPN Status"
   echo
 
@@ -89,20 +89,14 @@ while true; do
   if [[ "$answer" == "1" || -z "$answer" ]]; then
     clear
     logo
-    printf "1\n" | sudo surfshark-vpn attack >/dev/null 2>&1 &
-    pid=$!
-
-    if animation "$pid"; then
-      echo "VPN connected"
-    else
-      echo "VPN failed"
-    fi
-    get_input 0
+    gtk-launch surfshark
+    sleep 1
+    get_input 1
 
   elif [[ "$answer" == "2" ]]; then
     clear
     logo
-    sudo surfshark-vpn down >/dev/null 2>&1 &
+    pkill -9 surfshark >/dev/null 2>&1 &
     pid=$!
 
     if animation "$pid"; then
@@ -115,7 +109,8 @@ while true; do
   elif [[ "$answer" == "3" ]]; then
     clear
     logo
-    sudo surfshark-vpn status
+    ip=$(curl -s ipinfo.io/country)
+    echo "IP: $ip"
     get_input 1
 
   else

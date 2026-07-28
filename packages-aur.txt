@@ -7,7 +7,6 @@ minecraft-launcher
 protonup-git
 python-tkcalendar
 surfshark-client
-surfshark-vpn-cli-bin
 tofi
 walker-bin
 wifitui

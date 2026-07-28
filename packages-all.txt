@@ -77,7 +77,6 @@ spotify-launcher
 steam
 sudo
 surfshark-client
-surfshark-vpn-cli-bin
 swaybg
 thunar
 thunar-volman
