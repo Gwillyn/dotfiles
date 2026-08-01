@@ -1,0 +1,58 @@
+#!/bin/bash
+
+if pgrep -x hyprsunset >/dev/null; then
+  gamma=$(hyprctl hyprsunset gamma)
+else
+  gamma=100
+fi
+step=5
+minimum=20
+maximum=100
+
+logo() {
+  printf """
+      ▄▖          
+      ▌ ▀▌▛▛▌▛▛▌▀▌
+      ▙▌█▌▌▌▌▌▌▌█▌
+"""
+}
+
+menu() {
+  printf """
+         ↑ Up
+         ↓ Down
+
+        -> Disable
+"""
+  while true; do
+    read -rsn1 key
+
+    # Arrow keys begin with ESC
+    if [[ $key == $'\e' ]]; then
+      read -rsn2 key
+
+      case "$key" in
+      "[A") # Up
+        gamma=$((gamma + step))
+        ((gamma > maximum)) && gamma=$maximum
+        hyprctl hyprsunset gamma "$gamma" >/dev/null
+        ;;
+      "[B") # Down
+        gamma=$((gamma - step))
+        ((gamma < minimum)) && gamma=$minimum
+        hyprctl hyprsunset gamma "$gamma" >/dev/null
+        ;;
+      "[C") # Right
+        pkill hyprsunset
+        break
+        ;;
+      esac
+    fi
+  done
+}
+
+logo
+if ! pgrep -x hyprsunset >/dev/null; then
+  setsid hyprsunset >/dev/null 2>&1 </dev/null &
+fi
+menu

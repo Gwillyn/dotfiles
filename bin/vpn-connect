@@ -17,8 +17,8 @@ logo() {
       ▒▒▒      ▒▒▒▒▒        ▒▒▒▒▒    ▒▒▒▒▒ 
                                            
                             * - Default    
-
-  """
+                                           
+"""
 }
 get_input() {
   local def="$1"
@@ -109,8 +109,12 @@ while true; do
   elif [[ "$answer" == "3" ]]; then
     clear
     logo
-    ip=$(curl -s ipinfo.io/country)
+    hostname=$(curl -s ipinfo.io/hostname)
+    country=$(curl -s ipinfo.io/country)
+    ip=$(curl -s ipinfo.io/ip)
     echo "IP: $ip"
+    echo "Hostname: $hostname"
+    echo "Country: $country"
     get_input 1
 
   else

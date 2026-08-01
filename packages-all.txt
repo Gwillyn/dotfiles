@@ -14,12 +14,12 @@ btop
 btrfs-progs
 chromium
 cryptsetup
+ddcutil
 discord
 eclipse-jee-bin
 efibootmgr
 fd
 fzf
-gammastep
 gimp
 git
 gjs
@@ -30,9 +30,11 @@ grim
 grub
 gum
 gvfs
+heroic-games-launcher
 hypridle
 hyprland
 hyprlock
+hyprsunset
 imagemagick
 jdk-openjdk
 kdenlive
@@ -78,8 +80,6 @@ steam
 sudo
 surfshark-client
 swaybg
-thunar
-thunar-volman
 tofi
 ttf-dejavu
 ttf-jetbrains-mono-nerd
@@ -96,6 +96,7 @@ winetricks
 wiremix
 wireplumber
 wl-clipboard
+wlroots0.20
 wofi
 xdg-desktop-portal
 xdg-desktop-portal-hyprland

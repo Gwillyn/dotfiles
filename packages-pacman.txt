@@ -13,11 +13,11 @@ btop
 btrfs-progs
 chromium
 cryptsetup
+ddcutil
 discord
 efibootmgr
 fd
 fzf
-gammastep
 gimp
 git
 gjs
@@ -31,6 +31,7 @@ gvfs
 hypridle
 hyprland
 hyprlock
+hyprsunset
 imagemagick
 jdk-openjdk
 kdenlive
@@ -69,8 +70,6 @@ spotify-launcher
 steam
 sudo
 swaybg
-thunar
-thunar-volman
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation
@@ -84,6 +83,7 @@ winetricks
 wiremix
 wireplumber
 wl-clipboard
+wlroots0.20
 wofi
 xdg-desktop-portal
 xdg-desktop-portal-hyprland

@@ -34,3 +34,13 @@ hl.window_rule({
 	center = true,
 	size = "1000 700",
 })
+
+hl.window_rule({
+	name = "float-terminals-xtrasmall",
+	match = {
+		class = "^float-xtra-small$",
+	},
+	float = true,
+	center = true,
+	size = "300 300",
+})

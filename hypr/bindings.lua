@@ -36,7 +36,7 @@ hl.bind(mainMod .. " + CTRL + W", hl.dsp.exec_cmd("kitty --class float -e wallap
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd("gtk-launch gmail"))
 hl.bind(mainMod .. " + CTRL + P", hl.dsp.exec_cmd("kitty -e eat-food"))
 hl.bind(mainMod .. " + CTRL + SHIFT + P", hl.dsp.exec_cmd("kitty -e eat-food --g"))
-hl.bind(mainMod .. " + CTRL + G", hl.dsp.exec_cmd("~/.local/bin/brightness-lower"))
+hl.bind(mainMod .. " + CTRL + G", hl.dsp.exec_cmd("kitty --class float-xtra-small -e gamma-change"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("kitty -e nvim-projects"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("kitty --class float-small -e power-select"))
 hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_cmd("zeditor"))
