@@ -89,14 +89,14 @@ while true; do
   if [[ "$answer" == "1" || -z "$answer" ]]; then
     clear
     logo
-    gtk-launch surfshark
+    setsid -f gtk-launch surfshark >/dev/null 2>&1
     sleep 1
     get_input 1
 
   elif [[ "$answer" == "2" ]]; then
     clear
     logo
-    pkill -9 surfshark >/dev/null 2>&1 &
+    pkill surfshark >/dev/null 2>&1 &
     pid=$!
 
     if animation "$pid"; then
