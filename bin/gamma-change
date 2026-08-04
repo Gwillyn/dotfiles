@@ -1,5 +1,9 @@
 #!/bin/bash
 
+GOLD="\e[38;2;217;159;21m"
+RESET="\e[0m"
+printf "${GOLD}"
+
 if pgrep -x hyprsunset >/dev/null; then
   gamma=$(hyprctl hyprsunset gamma)
 else
