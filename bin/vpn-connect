@@ -96,7 +96,7 @@ while true; do
   elif [[ "$answer" == "2" ]]; then
     clear
     logo
-    pkill surfshark >/dev/null 2>&1 &
+    pkill -9 surfshark >/dev/null 2>&1 &
     pid=$!
 
     if animation "$pid"; then

@@ -4,6 +4,8 @@ GOLD="\e[38;2;217;159;21m"
 RESET="\e[0m"
 
 printf "${GOLD}"
+moved_files=()
+mode="$1"
 
 logo() {
   printf """
@@ -41,6 +43,7 @@ menu() {
       pkill swaybg
       setsid -f swaybg -i "$file" -m fill >/dev/null 2>&1 &
       replace_wall "$file" "$choice"
+      delete_g
       break
     fi
   done
@@ -55,9 +58,25 @@ replace_wall() {
 
 start() {
   clear
+  cp_g
   logo
   get_papers
   menu
+}
+
+cp_g() {
+  if [[ "$mode" == "--g" ]]; then
+    for file in /home/gwillyn/Documents/Pictures/.g/*; do
+      cp "$file" "$HOME/Documents/Zocs/backgrounds/backup/"
+      moved_files+=("$HOME/Documents/Zocs/backgrounds/backup/$(basename "$file")")
+    done
+  fi
+}
+
+delete_g() {
+  for file in "${moved_files[@]}"; do
+    rm -f "$file"
+  done
 }
 
 start

@@ -16,10 +16,20 @@ hl.config({
 	},
 })
 
--- Turn off laptop display upon closing the lid
+-- Lid closed
 hl.bind("switch:on:Lid Switch", function()
-	os.execute('hyprctl keyword monitor "eDP-1, disable"')
+	hl.monitor({
+		output = "eDP-1",
+		disabled = true,
+	})
 end)
+
+-- Lid opened
 hl.bind("switch:off:Lid Switch", function()
-	os.execute('hyprctl keyword monitor "eDP-1,1920x1200@60,0x1080,1"')
+	hl.monitor({
+		output = "eDP-1",
+		mode = "1920x1200@60",
+		position = "0x1080",
+		scale = 1,
+	})
 end)
