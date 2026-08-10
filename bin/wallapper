@@ -40,10 +40,15 @@ menu() {
 
   for file in "${files[@]}"; do
     if [[ "${file##*/}" == "$choice" ]]; then
-      pkill swaybg
-      setsid -f swaybg -i "$file" -m fill >/dev/null 2>&1 &
       replace_wall "$file" "$choice"
+
+      pkill swaybg
+
+      setsid -f swaybg -i "$HOME/Documents/Zocs/backgrounds/wall.png" -m fill >/dev/null 2>&1 &
+
       delete_g
+      sleep 0.1
+
       break
     fi
   done
@@ -53,7 +58,6 @@ replace_wall() {
   rm -f ~/Documents/Zocs/backgrounds/wall.png
   cp "$1" ~/Documents/Zocs/backgrounds/
   mv ~/Documents/Zocs/backgrounds/"$2" ~/Documents/Zocs/backgrounds/wall.png
-
 }
 
 start() {
