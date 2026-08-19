@@ -37,6 +37,7 @@ hyprlock
 hyprsunset
 imagemagick
 jdk-openjdk
+jdk17-openjdk
 kdenlive
 keyd
 kitty
@@ -50,11 +51,13 @@ localsend
 lutris
 man-db
 man-pages
+mariadb
 maven
 mcpelauncher-linux
 mcpelauncher-ui
 minecraft-launcher
 mpv
+mysql-workbench
 nano
 neovim
 network-manager-applet

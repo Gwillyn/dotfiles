@@ -115,6 +115,9 @@ hl.bind("XF86AudioStop", hl.dsp.exec_cmd("playerctl stop"), { locked = true })
 hl.bind("XF86Launch7", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy --type image/png]]))
 hl.bind("SHIFT + XF86Launch7", hl.dsp.exec_cmd([[grim - | wl-copy --type image/png]]))
 
+-- For external keyboard without pic key
+hl.bind(mainMod .. " + SHIFT + 9", hl.dsp.exec_cmd([[sh -c 'grim -g "$(slurp)" - | wl-copy']]))
+
 -- Other special keys
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("gnome-calculator"))
 hl.bind("XF86Explorer", hl.dsp.exec_cmd("thunar"))
