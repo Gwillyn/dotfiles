@@ -3,3 +3,6 @@
 .cache/
 node_modules/
 __pycache__/
+bin/ssh-shutdown
+bin/ssh-mac
+

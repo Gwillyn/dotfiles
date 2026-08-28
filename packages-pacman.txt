@@ -73,6 +73,7 @@ spotify-launcher
 steam
 sudo
 swaybg
+tailscale
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation

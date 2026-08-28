@@ -83,6 +83,7 @@ steam
 sudo
 surfshark-client
 swaybg
+tailscale
 tofi
 ttf-dejavu
 ttf-jetbrains-mono-nerd
