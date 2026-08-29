@@ -4,5 +4,6 @@
 node_modules/
 __pycache__/
 bin/ssh-shutdown
-bin/ssh-mac
+bin/mac-ssh
+bin/codex
 
