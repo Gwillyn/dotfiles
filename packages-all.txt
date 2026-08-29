@@ -22,6 +22,7 @@ fd
 fzf
 gimp
 git
+git-filter-repo
 gjs
 gnome-keyring
 greetd
@@ -79,6 +80,7 @@ scrcpy
 seahorse
 slurp
 spotify-launcher
+sshpass
 steam
 sudo
 surfshark-client
