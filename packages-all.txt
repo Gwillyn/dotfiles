@@ -12,6 +12,7 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
+calc
 chromium
 cryptsetup
 ddcutil
